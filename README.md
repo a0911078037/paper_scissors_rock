@@ -31,6 +31,12 @@ while True:
         if key == ord('q'):
             break
 ```
+
+## 訓練過程
+tensorflow 的模型，在資料的部分有使用shuffle。  
+並在訓練過程有使用 ModelCheckpoint、EarlyStopping 來防止過度擬合。  
+最後的 ACC 有達到 0.99 以及 LOSS 也有下降至 0.18。
+交叉驗證的結果也有在 95% 以上。
 ## 實作方法
 由 multi thread 去執行不同鏡頭輸入影像去做手勢偵測，並成功分辨出 paper、scissors、rock 的手勢，  
 並在輸出影像上加上剪刀、石頭、布的標示。  
